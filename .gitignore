@@ -1,0 +1,86 @@
+# ==============================================================================
+# TrustRAG .gitignore
+# ==============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# C extensions & distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments (STRICT: Never commit virtual environments)
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment Variables and Secrets (STRICT: Never commit credentials)
+.env
+.env.*
+!.env.example
+
+# Local Databases, Vector Stores & Working Artifacts
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+chroma/
+chromadb/
+data/chromadb/
+
+# Local Data Directories (Ignore contents, preserve structure via .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Evaluation output reports (Ignore generated artifacts, keep structure)
+evaluation/reports/*
+!evaluation/reports/.gitkeep
+
+# Unit test & coverage reports
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+
