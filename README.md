@@ -90,7 +90,7 @@ Verify available Python installations:
 ```powershell
 py --list
 ```
-If Python 3.12 is not listed, see [Section 6: Installing Python 3.12](#6-installing-python-312-on-windows).
+If Python 3.12 is not listed, see [Section 5: Installing Python 3.12](#5-installing-python-312-on-windows).
 
 ---
 
@@ -141,11 +141,11 @@ Open `.env` and review the default configuration.
 ---
 
 ### Step 6: Run Environment Verification
-Execute the automated sanity check script:
+Execute the automated environment verification script:
 ```powershell
 python scripts/verify_env.py
 ```
-This script will verify your Python version, virtual environment status, folder structure, and test importing all 15 core dependencies.
+This script validates your Python 3.12 runtime, virtual environment isolation, directory layout, security exclusions in `.gitignore`, Phase 1 documentation integrity, and active Phase 2 dependencies.
 
 ---
 

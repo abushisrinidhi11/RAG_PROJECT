@@ -163,7 +163,7 @@ def check_8_phase1_docs():
     return all_ok
 
 def check_9_future_roadmap():
-    print("\n[9/9] Verifying Future Phase Dependency Roadmap in requirements.txt...")
+    print("\n[9/9] Verifying Python Dependency Roadmap in requirements.txt...")
     base_dir = Path(__file__).resolve().parent.parent
     req = base_dir / "requirements.txt"
     if not req.is_file():
@@ -173,10 +173,11 @@ def check_9_future_roadmap():
     required_sections = ["PHASE 2", "PHASE 3", "PHASE 4", "PHASE 5", "PHASE 7", "PHASE 9"]
     all_present = all(sec in content for sec in required_sections)
     if all_present:
-        print("      [PASS] requirements.txt maps all 12 implementation phases cleanly.")
+        print("      [PASS] requirements.txt cleanly maps Python dependencies across backend phases.")
+        print("             (Note: Frontend dependencies will be managed via frontend/package.json in Phase 11).")
         return True
     else:
-        print("      [FAIL] requirements.txt is missing phase section mappings.")
+        print("      [FAIL] requirements.txt is missing backend phase section mappings.")
         return False
 
 def main():
